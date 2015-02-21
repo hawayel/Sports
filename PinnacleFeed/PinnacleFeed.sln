@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PinnacleFeed.Engine", "PinnacleFeed.Engine\PinnacleFeed.Engine.csproj", "{1086AAD0-FF2C-420A-A41C-FD7FE7076E29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PinnacleFeed.Engine.Tests", "PinnacleFeed.Engine.Tests\PinnacleFeed.Engine.Tests.csproj", "{7F36DE92-A44E-46F5-A46D-E664E64877EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{672DC462-F8BE-44E4-B31F-22B94A5CF417}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		PinnacleFeed.vsmdi = PinnacleFeed.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = PinnacleFeed.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1086AAD0-FF2C-420A-A41C-FD7FE7076E29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1086AAD0-FF2C-420A-A41C-FD7FE7076E29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1086AAD0-FF2C-420A-A41C-FD7FE7076E29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1086AAD0-FF2C-420A-A41C-FD7FE7076E29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F36DE92-A44E-46F5-A46D-E664E64877EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F36DE92-A44E-46F5-A46D-E664E64877EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F36DE92-A44E-46F5-A46D-E664E64877EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F36DE92-A44E-46F5-A46D-E664E64877EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
