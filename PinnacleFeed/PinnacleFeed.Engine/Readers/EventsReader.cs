@@ -53,9 +53,21 @@ namespace PinnacleFeed.Engine.Readers
 
         private static Spread[] GetSpreads(Event match, XElement xPeriod)
         {
-            return (null == xPeriod) ? 
-                null : 
-                xPeriod.Element("spreads").Elements("spread")
+            var spreads = new Spread[] { };
+
+            if (null == xPeriod)
+            {
+                return spreads;
+            }
+
+            var xSpreads = xPeriod.Element("spreads");
+
+            if(null == xSpreads || !xSpreads.HasElements)
+            {
+                return spreads;
+            }
+
+            spreads = xSpreads.Elements("spread")
                 .Select(s => new Spread() {
                     SportId = match.SportId,
                     LeagueId = match.LeagueId,
@@ -66,13 +78,26 @@ namespace PinnacleFeed.Engine.Readers
                     AwayPrice = Convert.ToDecimal(s.Element("awayPrice").Value),
                     IsAlt = (null != s.Attribute("altLineId")),
                 }).ToArray();
+
+            return spreads;
         }
 
         private static Total[] GetTotals(Event match, XElement xPeriod)
         {
-            return (null == xPeriod) ? 
-                null : 
-                xPeriod.Element("totals").Elements("total")
+            var totals = new Total[] { };
+
+            if (null == xPeriod) 
+            {
+                return totals;
+            }
+
+            var xTotals = xPeriod.Element("totals");
+            if(null == xTotals || !xTotals.HasElements)
+            {
+                return totals;
+            }
+
+            totals = xTotals.Elements("total")
                 .Select(s => new Total() {
                     SportId = match.SportId,
                     LeagueId = match.LeagueId,
@@ -82,6 +107,8 @@ namespace PinnacleFeed.Engine.Readers
                     UnderPrice = Convert.ToDecimal(s.Element("underPrice").Value),
                     IsAlt = (null != s.Attribute("altLineId")),
                 }).ToArray();
+
+            return totals;
         }
     }
 }

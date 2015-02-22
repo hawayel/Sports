@@ -40,7 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\EventWriter.cs" />
     <Compile Include="Infrastructure\BasicAuth.cs" />
+    <Compile Include="Infrastructure\ConfigManager.cs" />
     <Compile Include="Models\Event.cs" />
     <Compile Include="Models\League.cs" />
     <Compile Include="Models\Sport.cs" />
